@@ -1,0 +1,18 @@
+{
+    "name": "Irish Residence Permit helper",
+    "version": "1.0",
+    "description": "Chrome extension to make it easier to book Irish Residence Permit",
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": ["https://burghquayregistrationoffice.inis.gov.ie/Website/AMSREG/*"],
+        "js": ["src/vendor/jquery.min.js", "src/vendor/moment.js", "src/data-store.js", "src/content/content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "src/settings/settings.htm",
+      "default_title": "IRP helper settings"
+    },
+    "web_accessible_resources": ["src/notifier/notifier.js"],
+    "permissions": ["storage", "webNavigation"]
+  }
