@@ -1,6 +1,6 @@
 {
     "name": "Irish Residence Permit helper",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Chrome extension to make it easier to book Irish Residence Permit",
     "manifest_version": 2,
     "content_scripts": [
@@ -10,9 +10,14 @@
       }
     ],
     "browser_action": {
+      "default_icon": "icon.jpg",
       "default_popup": "src/settings/settings.htm",
       "default_title": "IRP helper settings"
     },
     "web_accessible_resources": ["src/notifier/notifier.js"],
-    "permissions": ["storage", "webNavigation"]
+    "permissions": ["storage"],
+    "icons": {
+      "16": "icon.jpg",
+      "32": "icon.jpg"
+    }
   }
