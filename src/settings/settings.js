@@ -51,14 +51,14 @@ async function save()
 
     if (data.irp && data.irp.length)
     {
-        let irpExpiryMoment = moment([+$("#irpExpiryY").val(), +$("#irpExpiryM").val(), +$("#irpExpiryD").val()]);
+        let irpExpiryMoment = moment([+$("#irpExpiryY").val(), $("#irpExpiryM").val() - 1, +$("#irpExpiryD").val()]);
         if (irpExpiryMoment.isValid())
         {
             data.irpExpiry = irpExpiryMoment.format("DD/MM/YYYY");
         }
     }
 
-    let dobMoment = moment([+$("#dobY").val(), +$("#dobM").val(), +$("#dobD").val()]);
+    let dobMoment = moment([+$("#dobY").val(), $("#dobM").val() - 1, +$("#dobD").val()]);
     if (dobMoment.isValid())
     {
         data.dob = dobMoment.format("DD/MM/YYYY");
