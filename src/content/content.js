@@ -31,6 +31,7 @@ async function run()
 
     $("#UsrDeclaration").prop("checked", true);
 
+    setField("#Salutation", data.salutation || '');
     setField("#GivenName", data.firstName);
     setField("#SurName", data.lastName);
     setField("#DOB", data.dob);

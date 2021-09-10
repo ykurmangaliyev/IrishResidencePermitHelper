@@ -5,6 +5,7 @@ async function fill()
     if (!data)
         return;
 
+    $("#salutation").val(data.salutation);
     $("#firstName").val(data.firstName);
     $("#lastName").val(data.lastName);
 
@@ -40,6 +41,7 @@ async function fill()
 async function save()
 {
     let data = {
+        salutation: $("#salutation").val(),
         firstName: $("#firstName").val().trim(),
         lastName: $("#lastName").val().trim(),
         nationality: $("#nationality").val(),
